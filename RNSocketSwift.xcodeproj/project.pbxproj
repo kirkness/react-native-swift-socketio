@@ -317,7 +317,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = SocketBridge.h;
+				SWIFT_OBJC_BRIDGING_HEADER = RNSocketSwift/SocketBridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -336,7 +336,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = SocketBridge.h;
+				SWIFT_OBJC_BRIDGING_HEADER = RNSocketSwift/SocketBridge.h;
 			};
 			name = Release;
 		};
