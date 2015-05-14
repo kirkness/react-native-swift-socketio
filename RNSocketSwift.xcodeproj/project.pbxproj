@@ -10,6 +10,8 @@
 		BA434E491B04F9FB00EF8CB5 /* RNSocketSwift.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BA434E481B04F9FB00EF8CB5 /* RNSocketSwift.h */; };
 		BA434E4B1B04F9FB00EF8CB5 /* RNSocketSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = BA434E4A1B04F9FB00EF8CB5 /* RNSocketSwift.m */; };
 		BA434E511B04F9FB00EF8CB5 /* libRNSocketSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA434E451B04F9FB00EF8CB5 /* libRNSocketSwift.a */; };
+		BA434E621B04FC3500EF8CB5 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA434E5F1B04FC3500EF8CB5 /* Socket.swift */; };
+		BA434E631B04FC3500EF8CB5 /* SocketBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = BA434E601B04FC3500EF8CB5 /* SocketBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,9 @@
 		BA434E4A1B04F9FB00EF8CB5 /* RNSocketSwift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSocketSwift.m; sourceTree = "<group>"; };
 		BA434E501B04F9FB00EF8CB5 /* RNSocketSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNSocketSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA434E561B04F9FB00EF8CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA434E5F1B04FC3500EF8CB5 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		BA434E601B04FC3500EF8CB5 /* SocketBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketBridge.m; sourceTree = "<group>"; };
+		BA434E611B04FC3500EF8CB5 /* SocketBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketBridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				BA434E481B04F9FB00EF8CB5 /* RNSocketSwift.h */,
+				BA434E5F1B04FC3500EF8CB5 /* Socket.swift */,
+				BA434E601B04FC3500EF8CB5 /* SocketBridge.m */,
+				BA434E611B04FC3500EF8CB5 /* SocketBridge.h */,
 				BA434E4A1B04F9FB00EF8CB5 /* RNSocketSwift.m */,
 			);
 			path = RNSocketSwift;
@@ -193,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA434E621B04FC3500EF8CB5 /* Socket.swift in Sources */,
+				BA434E631B04FC3500EF8CB5 /* SocketBridge.m in Sources */,
 				BA434E4B1B04F9FB00EF8CB5 /* RNSocketSwift.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,18 +306,37 @@
 		BA434E5A1B04F9FB00EF8CB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = SocketBridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		BA434E5B1B04F9FB00EF8CB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = SocketBridge.h;
 			};
 			name = Release;
 		};
