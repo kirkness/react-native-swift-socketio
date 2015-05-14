@@ -26,8 +26,5 @@
   "homepage": "https://github.com/kirkness/react-native-swift-socketio",
   "devDependencies": {
     "react-native": "^0.4.2"
-  },
-  "peerDependencies": {
-    "react-native": "^0.4.2"
   }
 }
