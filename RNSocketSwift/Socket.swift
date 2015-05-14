@@ -69,10 +69,10 @@ class SocketIO: RCTBridge {
   private func onAnyEventHandler (sock: SocketAnyEvent) -> Void {
     if let items = sock.items {
       self.bridge.eventDispatcher.sendDeviceEventWithName("socketEvent",
-        body: ["event": sock.event, "items": items])
+        body: ["name": sock.event, "items": items])
     } else {
       self.bridge.eventDispatcher.sendDeviceEventWithName("socketEvent",
-        body: ["event": sock.event])
+        body: ["name": sock.event])
     }
   }
   
