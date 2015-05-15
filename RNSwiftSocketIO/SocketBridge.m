@@ -8,7 +8,7 @@
 
 #import "RCTBridge.h"
 
-@interface RCT_EXTERN_MODULE(SocketIO, RCTBridge)
+@interface RCT_EXTERN_MODULE(SocketIO, NSObject)
 
 RCT_EXTERN_METHOD(initialise:(NSString*)connection config:(NSDictionary*)config)
 RCT_EXTERN_METHOD(addHandlers:(NSDictionary*)handlers)
