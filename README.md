@@ -78,8 +78,8 @@ Optional:
 
 ### Known issues
 
-- Refreshing the device currently creates the issue `// runloop spun. that's bad.`
-    - To be looked into let me know if you know the fix!
+- ~~Refreshing the device currently creates the issue `// runloop spun. that's bad.`~~
+    - ~~To be looked into let me know if you know the fix!~~
 - Would rather this in an xcode framework but run into non-modular header issue.
 
 ### Install
