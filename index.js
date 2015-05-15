@@ -1,5 +1,11 @@
+'use strict';
 
+var React = require('react-native');
 var sockets = require('NativeModules').SocketIO;
+
+var {
+  DeviceEventEmitter
+} = React;
 
 class Socket {
   constructor (host, config) {
