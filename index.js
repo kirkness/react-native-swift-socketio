@@ -70,3 +70,5 @@ class Socket {
     this.sockets.reconnect();
   }
 }
+
+module.exports = Socket;
