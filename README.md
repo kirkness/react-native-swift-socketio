@@ -1,5 +1,7 @@
 # A React Native wrapper for the Socket.io Swift Library
 
+The wrapped 'Socket.IO-Client-Swift' can be [found here](https://github.com/socketio/socket.io-client-swift).
+
 ### Example
 I've also added a super simple example app to /examples, copy and paste to your index.ios.js.
 ``` js
@@ -36,10 +38,12 @@ socket.reconect();
 ```
 
 ### Constructor
+
 Requires:
-- host; example: 'localhost:3000'
+`host` - example: 'localhost:3000'
+
 Optional:
-- config; JSON object comprising any of the options listed below.
+`config` - JSON object comprising any of the options listed below.
 
 
 ### Config
