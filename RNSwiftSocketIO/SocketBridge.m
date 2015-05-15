@@ -1,6 +1,6 @@
 //
 //  SocketBridge.m
-//  ReactSockets
+//  RNSwiftSocketIO
 //
 //  Created by Henry Kirkness on 10/05/2015.
 //  Copyright (c) 2015 Facebook. All rights reserved.
