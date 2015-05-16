@@ -30,6 +30,12 @@ socket.onAny((event) => {
     console.log(`${event.name} was called with data: `, event.items);
 });
 
+// Manually join namespace
+socket.joinNamespace()
+
+// Leave namespace, back to '/'
+socket.leaveNamespace()
+
 // Emit an event to server
 socket.emit('helloWorld', {some: 'data'});
 
@@ -80,6 +86,8 @@ Optional:
 - `close` - Close the connection
     - `@param` - Boolean - should close fast?
 - `reconnect` - Reconnect to a closed connection
+- `joinNamespace` - Manually join namespace
+- `leaveNamespace` - Leave namespace, back to '/'
 
 ### Known issues
 

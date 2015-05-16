@@ -41,6 +41,22 @@ class SocketIO: NSObject {
   }
 
   /**
+  * Manually join the namespace
+  */
+
+  @objc func joinNamespace() {
+    self.socket.joinNamespace();
+  }
+
+  /**
+  * Leave namespace back to '/'
+  */
+
+  @objc func leaveNamespace() {
+    self.socket.leaveNamespace();
+  }
+
+  /**
   * Exposed but not currently used
   * add NSDictionary of handler events
   */

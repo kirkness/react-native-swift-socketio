@@ -1,10 +1,10 @@
 {
   "name": "react-native-swift-socketio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A react native wrapper for socket.io-client-swift",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": ""
   },
   "repository": {
     "type": "git",
