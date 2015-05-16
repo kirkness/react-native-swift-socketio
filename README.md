@@ -12,6 +12,9 @@ I've also added a super simple example app to /examples, copy and paste to your 
 var socketConfig = { path: '/socket' };
 var socket = new SocketIO('localhost:3000', socketConfig);
 
+// Connect!
+socket.connect();
+
 // An event to be fired on connection to socket
 socket.on('connect', () => {
     console.log('Wahey -> connected!');
@@ -59,12 +62,14 @@ Optional:
 - `path: String` - If the server uses a custom path. ex: `"/swift"`. Default is `""`
 
 #### Not supported yet but easy enough to implement.
+
 - ~~`cookies: [NSHTTPCookie]?` An array of NSHTTPCookies. Passed during the handshake. Default is nil.~~
 - ~~`sessionDelegate: NSURLSessionDelegate` Sets an NSURLSessionDelegate for the underlying engine. Useful if you need to handle self-signed certs. Default is nil.~~
 
 ### Methods
 
-- `on` - Add event hanler to socket
+- `connect` - Connect to socket
+- `on` - Add event handler to socket
     - `@param` - String - event name
     - `@param` - Function - callback
 - `onAny` - Add event handler to any event
@@ -78,8 +83,6 @@ Optional:
 
 ### Known issues
 
-- ~~Refreshing the device currently creates the issue `// runloop spun. that's bad.`~~
-    - ~~To be looked into let me know if you know the fix!~~
 - Would rather this in an xcode framework but run into non-modular header issue.
 
 ### Install
@@ -95,7 +98,7 @@ $ npm install react-native-swift-socketio
 - Click 'Add'
 - Click your project in the navigator on the left and go to **build settings**
 - Search for **Objective-C Bridging Header**
-- Double click on the enpty column
+- Double click on the empty column
 - Enter **node_modules/react-native-swift-socketio/RNSwiftSocketIO/SocketBridge.h**
 
 ... That should do it! Please let me know of any issues ...
