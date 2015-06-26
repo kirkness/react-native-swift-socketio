@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>56A17F65-50DD-45A0-B28B-9D72D5AA20F6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RNSwiftSocketIO</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C78D17F9D1170DAA4E77387A3C7E2A6009777A0D</key>
+		<string>https://github.com/kirkness/react-native-swift-socketio.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RNSwiftSocketIO.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C78D17F9D1170DAA4E77387A3C7E2A6009777A0D</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kirkness/react-native-swift-socketio.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C78D17F9D1170DAA4E77387A3C7E2A6009777A0D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C78D17F9D1170DAA4E77387A3C7E2A6009777A0D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RNSwiftSocketIO</string>
+		</dict>
+	</array>
+</dict>
+</plist>

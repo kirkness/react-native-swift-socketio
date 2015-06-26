@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:RNSwiftSocketIO"
+      name = "RNSwiftSocketIO">
+      <FileRef
+         location = "group:Socket.swift">
+      </FileRef>
+      <FileRef
+         location = "group:SocketBridge.h">
+      </FileRef>
+      <FileRef
+         location = "group:SocketBridge.m">
+      </FileRef>
+      <Group
+         location = "group:SocketIOClient"
+         name = "SocketIOClient">
+         <FileRef
+            location = "group:SocketAckManager.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SocketAnyEvent.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SocketEngine.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SocketEngineClient.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SocketEventHandler.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SocketFixUTF8.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SocketIOClient.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SocketLogger.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SocketPacket.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SocketParser.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SocketTypes.swift">
+         </FileRef>
+         <FileRef
+            location = "group:SwiftRegex.swift">
+         </FileRef>
+         <FileRef
+            location = "group:WebSocket.swift">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
