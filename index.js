@@ -66,7 +66,7 @@ class Socket {
   emit (event, data) {
     this.sockets.emit(event, data);
   }
-  
+
   joinNamespace () {
     this.sockets.joinNamespace();
   }
