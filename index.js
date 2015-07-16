@@ -1,10 +1,10 @@
 'use strict';
 
 var React = require('react-native');
-var sockets = require('NativeModules').SocketIO;
 
 var {
-  DeviceEventEmitter
+  DeviceEventEmitter,
+  SocketIO
 } = React;
 
 class Socket {
@@ -15,7 +15,7 @@ class Socket {
     if(typeof config === 'undefined')
       config = {};
 
-    this.sockets = sockets;
+    this.sockets = SocketIO;
     this.isConnected = false;
     this.handlers = {};
     this.onAnyHandler = null;
@@ -66,7 +66,7 @@ class Socket {
   emit (event, data) {
     this.sockets.emit(event, data);
   }
-  
+
   joinNamespace () {
     this.sockets.joinNamespace();
   }
