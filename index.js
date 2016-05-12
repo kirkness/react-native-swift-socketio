@@ -1,11 +1,6 @@
 'use strict';
 
-var React = require('react-native');
-
-var {
-  DeviceEventEmitter,
-  SocketIO
-} = React;
+import {DeviceEventEmitter, SocketIO } = require('react-native');
 
 class Socket {
   constructor (host, config) {
