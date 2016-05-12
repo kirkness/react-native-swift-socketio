@@ -25,6 +25,10 @@
 import Foundation
 
 public typealias AckCallback = ([AnyObject]) -> Void
-public typealias NormalCallback = ([AnyObject], SocketAckEmitter?) -> Void
+public typealias NormalCallback = ([AnyObject], SocketAckEmitter) -> Void
 public typealias OnAckCallback = (timeoutAfter: UInt64, callback: AckCallback) -> Void
 
+enum Either<E, V> {
+    case Left(E)
+    case Right(V)
+}

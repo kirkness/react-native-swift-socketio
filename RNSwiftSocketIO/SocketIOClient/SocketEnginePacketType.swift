@@ -1,8 +1,8 @@
 //
-//  SocketIOClientStatus.swift
+//  SocketEnginePacketType.swift
 //  Socket.IO-Client-Swift
 //
-//  Created by Erik Little on 8/14/15.
+//  Created by Erik Little on 10/7/15.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -21,12 +21,10 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
+//
 
 import Foundation
 
-/// **NotConnected**: initial state
-///
-/// **Disconnected**: connected before
-@objc public enum SocketIOClientStatus : Int {
-    case NotConnected, Disconnected, Connecting, Connected
+@objc public enum SocketEnginePacketType : Int {
+    case Open, Close, Ping, Pong, Message, Upgrade, Noop
 }
