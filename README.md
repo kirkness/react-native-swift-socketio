@@ -1,6 +1,14 @@
-# A React Native wrapper for the Socket.io Swift Library
+# A React Native wrapper for the Socket.io Library
+
+This project was forked from Kirkness' React Native Swift Socket.Io project
+[found here](https://github.com/kirkness/react-native-swift-socketio)
+
+This project will be forked from Kirkness' project and so that it will
+include the Java Swift Socket.Io project as well.
 
 The wrapped 'Socket.IO-Client-Swift' can be [found here](https://github.com/socketio/socket.io-client-swift).
+
+The wrapped 'Socket.IO-Client-Java' can be [found here](https://github.com/socketio/socket.io-client-java).
 
 ### Example
 I've also added a super simple example app to /examples, copy and paste to your index.ios.js.
@@ -30,8 +38,8 @@ socket.onAny((event) => {
     console.log(`${event.name} was called with data: `, event.items);
 });
 
-// Manually join namespace
-socket.joinNamespace()
+// Manually join namespace. Ex: namespace is now partyRoom
+socket.joinNamespace('partyRoom')
 
 // Leave namespace, back to '/'
 socket.leaveNamespace()
@@ -39,11 +47,11 @@ socket.leaveNamespace()
 // Emit an event to server
 socket.emit('helloWorld', {some: 'data'});
 
-// Optional boolean param 'fast' - defaults to false
-socket.close(true);
+//Disconnect from server
+socket.disconnect();
 
 // Reconnect to a closed socket
-socket.reconect();
+socket.reconnect();
 ```
 
 ### Constructor
