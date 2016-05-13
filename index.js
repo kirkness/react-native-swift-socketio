@@ -1,18 +1,14 @@
 'use strict';
 
-var React = require('react-native');
-
-var {
-  DeviceEventEmitter,
-  SocketIO
-} = React;
+import { DeviceEventEmitter, NativeModules } from 'react-native';
+let SocketIO = NativeModules.SocketIO;
 
 class Socket {
   constructor (host, config) {
 
-    if(typeof host === 'undefined')
+    if (typeof host === 'undefined')
       throw 'Hello there! Could you please give socket a host, please.';
-    if(typeof config === 'undefined')
+    if (typeof config === 'undefined')
       config = {};
 
     this.sockets = SocketIO;
@@ -40,15 +36,15 @@ class Socket {
   }
 
   _handleEvent (event) {
-    if(this.handlers.hasOwnProperty(event.name))
+    if (this.handlers.hasOwnProperty(event.name))
       this.handlers[event.name](
         (event.hasOwnProperty('items')) ? event.items : null
       );
 
-    if(this.defaultHandlers.hasOwnProperty(event.name))
+    if (this.defaultHandlers.hasOwnProperty(event.name))
       this.defaultHandlers[event.name]();
 
-    if(this.onAnyHandler) this.onAnyHandler(event);
+    if (this.onAnyHandler) this.onAnyHandler(event);
   }
 
   connect () {
@@ -67,17 +63,16 @@ class Socket {
     this.sockets.emit(event, data);
   }
 
-  joinNamespace () {
-    this.sockets.joinNamespace();
+  joinNamespace (namespace) {
+    this.sockets.joinNamespace(namespace);
   }
 
   leaveNamespace () {
     this.sockets.leaveNamespace();
   }
 
-  close (fast) {
-    if(typeof fast === 'undefined') fast = false;
-    this.sockets.close(fast);
+  disconnect () {
+    this.sockets.close();
   }
 
   reconnect () {

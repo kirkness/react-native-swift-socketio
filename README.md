@@ -1,6 +1,15 @@
-# A React Native wrapper for the Socket.io Swift Library
+# A React Native wrapper for the Socket.io Library
 
-The wrapped 'Socket.IO-Client-Swift' can be [found here](https://github.com/socketio/socket.io-client-swift).
+This project was forked from Kirkness' React Native Swift Socket.Io project
+[found here](https://github.com/kirkness/react-native-swift-socketio)
+
+Going forward, I will split from Kirkness' project so that it will
+include the Java Swift Socket.Io project as well. The point is to have one entry point into
+Socket.Io for both platforms.
+
+* The wrapped 'Socket.IO-Client-Swift' can be [found here](https://github.com/socketio/socket.io-client-swift).
+
+* The wrapped 'Socket.IO-Client-Java' can be [found here](https://github.com/socketio/socket.io-client-java).
 
 ### Example
 I've also added a super simple example app to /examples, copy and paste to your index.ios.js.
@@ -30,8 +39,8 @@ socket.onAny((event) => {
     console.log(`${event.name} was called with data: `, event.items);
 });
 
-// Manually join namespace
-socket.joinNamespace()
+// Manually join namespace. Ex: namespace is now partyRoom
+socket.joinNamespace('partyRoom')
 
 // Leave namespace, back to '/'
 socket.leaveNamespace()
@@ -39,11 +48,11 @@ socket.leaveNamespace()
 // Emit an event to server
 socket.emit('helloWorld', {some: 'data'});
 
-// Optional boolean param 'fast' - defaults to false
-socket.close(true);
+//Disconnect from server
+socket.disconnect();
 
 // Reconnect to a closed socket
-socket.reconect();
+socket.reconnect();
 ```
 
 ### Constructor
@@ -107,6 +116,9 @@ $ npm install react-native-swift-socketio
 - Click your project in the navigator on the left and go to **build settings**
 - Search for **Objective-C Bridging Header**
 - Double click on the empty column
-- Enter **node_modules/react-native-swift-socketio/RNSwiftSocketIO/SocketBridge.h**
+- Enter **../node_modules/react-native-swift-socketio/RNSwiftSocketIO/SocketBridge.h**
+- Search for **Header Search Paths**
+- Double Click on the column (likely has other search paths in it already)
+- Enter this text at the bottom of the column $(SRCROOT)/../node_modules/react-native-swift-socketio/RNSwiftSocketIO
 
 ... That should do it! Please let me know of any issues ...
