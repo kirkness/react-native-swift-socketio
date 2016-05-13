@@ -12,7 +12,7 @@ import Foundation
 class SocketIO: NSObject {
 
   var socket: SocketIOClient!
-  var connectionSocket: String!
+  var connectionSocket: NSURL!
   var bridge: RCTBridge!
 
   /**
@@ -28,12 +28,12 @@ class SocketIO: NSObject {
   */
 
   @objc func initialise(connection: String, config: NSDictionary) -> Void {
-    connectionSocket = connection
+    connectionSocket = NSURL(string: connection);
 
     // Connect to socket with config
     self.socket = SocketIOClient(
       socketURL: self.connectionSocket,
-      opts:config as? [String : AnyObject]
+      options:config as? [String : AnyObject]
     )
 
     // Initialise onAny events
@@ -44,8 +44,8 @@ class SocketIO: NSObject {
   * Manually join the namespace
   */
 
-  @objc func joinNamespace() {
-    self.socket.joinNamespace();
+  @objc func joinNamespace(namespace: String)  -> Void {
+        self.socket.joinNamespace(namespace);
   }
 
   /**
@@ -112,7 +112,7 @@ class SocketIO: NSObject {
   }
 
   // Disconnect from socket
-  @objc func close(fast: Bool) -> Void {
-    self.socket.close(fast: fast)
+  @objc func disconnect() -> Void {
+    self.socket.disconnect()
   }
 }

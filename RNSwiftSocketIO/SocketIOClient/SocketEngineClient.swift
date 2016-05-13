@@ -25,12 +25,10 @@
 
 import Foundation
 
-@objc public protocol SocketEngineClient {
-    var socketURL: String {get}
-    var secure: Bool {get}
-    
-    func didError(reason: AnyObject)
+@objc public protocol SocketEngineClient {    
+    func engineDidError(reason: String)
     func engineDidClose(reason: String)
-    func parseSocketMessage(msg: String)
-    func parseBinaryData(data: NSData)
+    optional func engineDidOpen(reason: String)
+    func parseEngineMessage(msg: String)
+    func parseEngineBinaryData(data: NSData)
 }
