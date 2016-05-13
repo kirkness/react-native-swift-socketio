@@ -3,12 +3,13 @@
 This project was forked from Kirkness' React Native Swift Socket.Io project
 [found here](https://github.com/kirkness/react-native-swift-socketio)
 
-This project will be forked from Kirkness' project and so that it will
-include the Java Swift Socket.Io project as well.
+Going forward, I will split from Kirkness' project so that it will
+include the Java Swift Socket.Io project as well. The point is to have one entry point into
+Socket.Io for both platforms.
 
-The wrapped 'Socket.IO-Client-Swift' can be [found here](https://github.com/socketio/socket.io-client-swift).
+* The wrapped 'Socket.IO-Client-Swift' can be [found here](https://github.com/socketio/socket.io-client-swift).
 
-The wrapped 'Socket.IO-Client-Java' can be [found here](https://github.com/socketio/socket.io-client-java).
+* The wrapped 'Socket.IO-Client-Java' can be [found here](https://github.com/socketio/socket.io-client-java).
 
 ### Example
 I've also added a super simple example app to /examples, copy and paste to your index.ios.js.
