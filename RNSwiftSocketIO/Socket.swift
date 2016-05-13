@@ -33,7 +33,7 @@ class SocketIO: NSObject {
     // Connect to socket with config
     self.socket = SocketIOClient(
       socketURL: self.connectionSocket,
-      opts:config as? [String : AnyObject]
+      options:config as? [String : AnyObject]
     )
 
     // Initialise onAny events
@@ -45,7 +45,7 @@ class SocketIO: NSObject {
   */
 
   @objc func joinNamespace(namespace: String)  -> Void {
-        self.socket.joinNamespace(namespace: namespace);
+        self.socket.joinNamespace(namespace);
   }
 
   /**
