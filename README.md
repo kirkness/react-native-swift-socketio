@@ -1,3 +1,5 @@
+🚨this library is not maintained anymore!
+
 # A React Native wrapper for the Socket.io Swift Library
 
 The wrapped 'Socket.IO-Client-Swift' can be [found here](https://github.com/socketio/socket.io-client-swift).
